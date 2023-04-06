@@ -72,6 +72,9 @@ const Quest = (props) => {
                                     <Button className="button-quiz finalscore" variant="primary" onClick={() => {props.retry(props.idx); setfinalScore(false); setScore(0); setProgress(0)} }>
                                         Retry
                                     </Button>
+                                    <Button className="button-quiz finalscore" variant="primary" href="/">
+                                        Back to Home
+                                    </Button>
                                  </div> : 
                                  
                                  <div className='question'>
