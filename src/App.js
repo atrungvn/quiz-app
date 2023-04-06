@@ -5,10 +5,15 @@ import axios from 'axios';
 import Quest from './Quest';
 
 
+
+
 function App() {
   const [initQuest,setInitQuest] = useState([]);
   const [idx,setIdx] = useState(0);
   const [loading,setLoading] = useState(true);
+
+
+
   useEffect(() => {
     const getData = async () => {
       const data = await axios.get(`${BASE_URL_API}`);
@@ -22,21 +27,20 @@ function App() {
   }
   ,[])
 
-  function handlenext (idx) {
+  const handlenext = (idx) => {
     if (idx < (initQuest.length-1))
     setIdx(idx+1);
   }
 
-  function handleprev (idx) {
-    if (idx>0) {
-      setIdx(idx-1);
-    }
+  const handleRetry = (idx) => {
+    setIdx(0); 
   }
 
   return (
+    
 
     <div className="App">
-      {loading? <>Loading...</> : <Quest data = {initQuest} idx={idx} nextqs={handlenext} prevqs={handleprev} />}   
+      {loading? <>Loading...</> : <Quest data = {initQuest} idx={idx} nextqs={handlenext} retry={handleRetry} />}   
     </div>
   );
 }

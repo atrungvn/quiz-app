@@ -1,38 +1,101 @@
 .App {
   text-align: center;
+  font-size: larger;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.label {
+  font-weight: bold;
+  color:indianred
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttonClear {
+  margin-left: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.result {
+  width:90%;
+  height:80%;
+  margin: 20px;
+  background-color: #cfe2ff;
+  border-radius: 2px;
+  text-align: center;
+  
+}
+
+.result:hover {
+  background-color: #0d6efd;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.checked {
+  background-color: #0d6efd;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.container1 {
+  width:100%;
+  position: relative;
+  top:100px;
+  
+}
+
+.question {
+  margin: auto;
+  min-height:400px;
+  
+  border-radius: 5px;
+  width: 50%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  justify-items: center;
+  
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.App-link {
-  color: #61dafb;
+.option { 
+  
+  margin-left: 50px;
+  /* display: flex; */
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* .quiz-container {
+  padding: 5px;
+} */
+
+.button-quiz {
+  margin: 20px;
+}
+
+.QS {
+  font-weight: bold;
+}
+
+.finalscore {
+  position: relative;
+  top: 150px;
+  font-size: xx-large;
+  margin:20px;
+}
+
+.home {
+  text-align: center;
+  
+  margin: 20px;
+}
+
+.welcome{
+  padding-top:120px;
+  font-size: 40px;
+  
 }

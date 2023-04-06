@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter,Route, Routes } from 'react-router-dom';
+import InputQuest from './Quest/inputQuest';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import LandingPage from './Quest/landingpage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element = {<LandingPage />}></Route>
+        <Route path='/quiz' element = {<App />}></Route>
+        <Route path='/input' element = {<InputQuest />}></Route>
+        <Route path='/edit' element = {<InputQuest />}></Route>
+      </Routes>
+    </BrowserRouter>
+    
   </React.StrictMode>
 );
 
