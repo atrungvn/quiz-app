@@ -23,7 +23,7 @@ const Quest = (props) => {
     if (running) {
       interval.current = setInterval(() => {
         setProgress((prev) => prev + 1);
-      }, 200);
+      }, 350);
     } else {
       clearInterval(interval.current);
     }

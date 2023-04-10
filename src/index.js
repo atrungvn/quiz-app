@@ -8,6 +8,7 @@ import InputQuest from './Quest/inputQuest';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import LandingPage from './Quest/landingpage';
+import EditQuest from './Quest/editQuest';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +18,7 @@ root.render(
         <Route path='/' element = {<LandingPage />}></Route>
         <Route path='/quiz' element = {<App />}></Route>
         <Route path='/input' element = {<InputQuest />}></Route>
-        <Route path='/edit' element = {<InputQuest />}></Route>
+        <Route path='/edit' element = {<EditQuest />}></Route>
       </Routes>
     </BrowserRouter>
     
